@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala MoEYS - ប្រព័ន្ធគ្រប់គ្រងសាលារៀន</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Kantumruy Pro', 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .khmer-muol {
+            font-weight: 700;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <!-- Logo and Title -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-3">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="hidden md:block">
+                            <h1 class="text-blue-800 font-bold text-lg leading-tight">សាលារៀន (SALA)</h1>
+                            <p class="text-xs text-gray-500 uppercase tracking-tighter">Ministry of Education, Youth and Sport</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-blue-600 border-b-2 border-blue-600 px-1 pt-1 text-sm font-medium">ទំព័រដើម</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 px-1 pt-1 text-sm font-medium transition">សេវាកម្ម</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 px-1 pt-1 text-sm font-medium transition">បណ្ណាល័យឌីជីថល</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 px-1 pt-1 text-sm font-medium transition">ព័ត៌មាន</a>
+                    
+                    <div class="flex items-center gap-4">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-medium transition shadow-lg">
+                            ចូលប្រើប្រាស់
+                        </button>
+                        <div class="flex items-center gap-1 cursor-pointer">
+                            <span class="text-sm font-medium">KH</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex md:hidden items-center">
+                    <button class="text-gray-500 hover:text-blue-600 focus:outline-none" id="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient text-white py-16 md:py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+                        ប្រព័ន្ធគ្រប់គ្រងសាលារៀន <br> ឌីជីថលកម្ពុជា
+                    </h2>
+                    <p class="text-lg text-blue-100 max-w-lg">
+                        ផ្តល់ភាពងាយស្រួលដល់ការគ្រប់គ្រងសាលារៀន ការបង្រៀន និងការរៀនតាមបែបឌីជីថល ស្របតាមយុគសម័យបច្ចេកវិទ្យាទំនើប។
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition shadow-xl">
+                            ចាប់ផ្តើមប្រើប្រាស់
+                        </button>
+                        <button class="border border-white/30 bg-white/10 backdrop-blur-md px-8 py-3 rounded-lg font-bold hover:bg-white/20 transition">
+                            ស្វែងយល់បន្ថែម
+                        </button>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <!-- SVG Illustration -->
+                    <div class="relative flex justify-center">
+                        <div class="absolute w-64 h-64 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
+                        <svg class="w-full max-w-md h-auto drop-shadow-2xl" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="50" y="100" width="400" height="300" rx="20" fill="white" />
+                            <rect x="70" y="120" width="360" height="200" rx="10" fill="#EBF4FF" />
+                            <circle cx="250" cy="350" r="15" fill="#3B82F6" />
+                            <path d="M100 150H250M100 180H200M100 210H300" stroke="#3B82F6" stroke-width="8" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative waves -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full h-auto">
+                <path fill="#f8fafc" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,117.3C960,107,1056,149,1152,154.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative -mt-16 z-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Student Portal -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition group border-b-4 border-orange-400">
+                <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center text-orange-500 text-3xl mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">សម្រាប់សិស្សានុសិស្ស</h3>
+                <p class="text-gray-600 mb-6">មើលលទ្ធផលសិក្សា តារាងរៀន និងឯកសារមេរៀនតាមមុខវិជ្ជាសាលា។</p>
+                <a href="#" class="text-orange-500 font-bold flex items-center gap-2 hover:gap-3 transition">
+                    ចូលទៅកាន់ច្រកទ្វារ <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Teacher Portal -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition group border-b-4 border-blue-500">
+                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 text-3xl mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">សម្រាប់គ្រូបង្រៀន</h3>
+                <p class="text-gray-600 mb-6">គ្រប់គ្រងពិន្ទុសិស្ស ការវត្តមាន និងការរៀបចំកិច្ចតែងការបង្រៀន។</p>
+                <a href="#" class="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition">
+                    ចូលទៅកាន់ច្រកទ្វារ <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- School Admin -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition group border-b-4 border-green-500">
+                <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center text-green-600 text-3xl mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-school"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">សម្រាប់នាយកសាលា</h3>
+                <p class="text-gray-600 mb-6">គ្រប់គ្រងទិន្នន័យរួមរបស់សាលា ស្ថិតិសិស្ស និងបុគ្គលិកអប់រំ។</p>
+                <a href="#" class="text-green-600 font-bold flex items-center gap-2 hover:gap-3 transition">
+                    ចូលទៅកាន់ច្រកទ្វារ <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- News Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-10">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">ព័ត៌មានថ្មីៗ</h2>
+                    <div class="w-20 h-1 bg-blue-600 rounded-full"></div>
+                </div>
+                <a href="#" class="text-blue-600 font-medium hover:underline">មើលទាំងអស់</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- News Item 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition border border-gray-100">
+                    <img src="https://placehold.co/400x250/1e40af/ffffff?text=Education+Update" alt="News" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <span class="text-xs font-bold text-blue-600 uppercase">សេចក្តីជូនដំណឹង</span>
+                        <h4 class="font-bold mt-2 mb-2 line-clamp-2">ការប្រឡងសញ្ញាបត្រមធ្យមសិក្សាទុតិយភូមិ សម័យប្រឡងឆ្នាំ២០២៤</h4>
+                        <p class="text-gray-500 text-xs flex items-center gap-2">
+                            <i class="far fa-calendar"></i> ១០ ឧសភា ២០២៤
+                        </p>
+                    </div>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition border border-gray-100">
+                    <img src="https://placehold.co/400x250/3b82f6/ffffff?text=Digital+Library" alt="News" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <span class="text-xs font-bold text-green-600 uppercase">បច្ចេកវិទ្យា</span>
+                        <h4 class="font-bold mt-2 mb-2 line-clamp-2">ការដាក់ឱ្យប្រើប្រាស់កម្មវិធីបណ្ណាល័យឌីជីថលជំនាន់ថ្មី</h4>
+                        <p class="text-gray-500 text-xs flex items-center gap-2">
+                            <i class="far fa-calendar"></i> ០៨ ឧសភា ២០២៤
+                        </p>
+                    </div>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition border border-gray-100">
+                    <img src="https://placehold.co/400x250/6366f1/ffffff?text=Training" alt="News" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <span class="text-xs font-bold text-orange-600 uppercase">វគ្គបណ្តុះបណ្តាល</span>
+                        <h4 class="font-bold mt-2 mb-2 line-clamp-2">ការបណ្តុះបណ្តាលគ្រូបង្គោលលើការប្រើប្រាស់ប្រព័ន្ធ Sala</h4>
+                        <p class="text-gray-500 text-xs flex items-center gap-2">
+                            <i class="far fa-calendar"></i> ០៥ ឧសភា ២០២៤
+                        </p>
+                    </div>
+                </div>
+
+                <!-- News Item 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition border border-gray-100">
+                    <img src="https://placehold.co/400x250/0ea5e9/ffffff?text=Partnership" alt="News" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <span class="text-xs font-bold text-purple-600 uppercase">កិច្ចសហការ</span>
+                        <h4 class="font-bold mt-2 mb-2 line-clamp-2">កិច្ចប្រជុំពិភាក្សាលើការអភិវឌ្ឍវិស័យអប់រំតាមបែបឌីជីថល</h4>
+                        <p class="text-gray-500 text-xs flex items-center gap-2">
+                            <i class="far fa-calendar"></i> ០២ ឧសភា ២០២៤
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Branding -->
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white text-xl">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <span class="text-white font-bold text-xl tracking-tight">SALA MoEYS</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">
+                        ប្រព័ន្ធគ្រប់គ្រងសាលារៀន គឺជាគំនិតផ្ដួចផ្ដើមរបស់ក្រសួងអប់រំ យុវជន និងកីឡា ដើម្បីជំរុញការផ្លាស់ប្ដូរឌីជីថលក្នុងវិស័យអប់រំនៅកម្ពុជា។
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links 1 -->
+                <div>
+                    <h5 class="text-white font-bold mb-6">តំណភ្ជាប់សំខាន់ៗ</h5>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#" class="hover:text-blue-400 transition">ទំព័រដើម</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">អំពីយើង</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">សេវាកម្ម</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">បណ្ណាល័យ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div>
+                    <h5 class="text-white font-bold mb-6">ធនធាន</h5>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#" class="hover:text-blue-400 transition">ឯកសារមេរៀន</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">វីដេអូបង្រៀន</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">សេចក្តីណែនាំ</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">ជំនួយបច្ចេកទេស</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h5 class="text-white font-bold mb-6">ទំនាក់ទំនង</h5>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-blue-500"></i>
+                            <span>អគារលេខ ៨០ វិថីព្រះនរោត្តម រាជធានីភ្នំពេញ កម្ពុជា</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-blue-500"></i>
+                            <span>(+855) 23 210 140</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-blue-500"></i>
+                            <span>info@moeys.gov.kh</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="pt-8 border-t border-gray-800 text-center text-xs">
+                <p>&copy; ២០២៤ រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ ក្រសួងអប់រំ យុវជន និងកីឡា</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-button');
+        menuBtn.addEventListener('click', () => {
+            // In a real application, you'd toggle a visible menu div here
+            const message = document.createElement('div');
+            message.className = 'fixed bottom-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-2 rounded-full shadow-lg z-50 transition-opacity duration-500';
+            message.textContent = 'មឺនុយទូរស័ព្ទត្រូវបានចុច';
+            document.body.appendChild(message);
+            setTimeout(() => {
+                message.style.opacity = '0';
+                setTimeout(() => message.remove(), 500);
+            }, 2000);
+        });
+
+        // Add scroll animation effect to header
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('h-20');
+                nav.classList.add('h-16');
+            } else {
+                nav.classList.remove('py-2');
+                nav.classList.add('h-20');
+                nav.classList.remove('h-16');
+            }
+        });
+    </script>
+</body>
+</html>
